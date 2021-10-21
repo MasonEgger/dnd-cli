@@ -1,0 +1,19 @@
+project_name: dndcli
+
+builds:
+- env:
+  - CGO_ENABLED=0
+  - GO111MODULE=on
+  binary: dndcli
+  flags:
+  - -v
+  goos:
+  - windows
+  - darwin
+  - linux
+  ignore:
+  - goos: darwin
+    goarch: 386
+
+changelog:
+  skip: true
